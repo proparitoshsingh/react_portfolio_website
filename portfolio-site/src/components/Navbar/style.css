@@ -1,7 +1,3 @@
-body {
-    margin: 0;
-    padding: 0;
-}
 .navbar {
     background-color: #212529;
     padding: 2.3%;
@@ -9,6 +5,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 2px 2px 20px #d36147;
 }
 
 .logo {
