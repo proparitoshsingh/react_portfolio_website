@@ -1,0 +1,66 @@
+.skills {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 1.2em;
+    text-decoration: underline;
+}
+
+.tile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 15vh;
+    background-color: #272629;
+    border-radius: 8px;
+    box-shadow: 1px 1px 10px #d36147;
+    margin: 3%;
+}
+
+.tile img {
+    width: 45%;
+    height: 45%;
+    transition: all 0.3s ease-in-out;
+}
+
+.tile.hovered img {
+    transform: scale(1.4);
+}
+
+.tile:hover {
+    box-shadow: 1px 1px 14px #d36147;
+}
+
+.name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .tile {
+        width: 25%;
+    }
+}
+
+@media (max-width: 768px) {
+    .tile {
+        width: 33.33%;
+    }
+}
+
+@media (max-width: 480px) {
+    .tile {
+        width: 50%;
+    }
+}

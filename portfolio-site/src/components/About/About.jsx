@@ -1,23 +1,23 @@
 import {React , useEffect} from 'react'
 import image from '../../assets/profile.png'
 import './style.css'
+import Socials from './socials/Socials';
 
 function About() {
     var roles = ["A Web Developer", "A Blockchain Developer", "A DeFi Enthusiast", "A Lifelong Student"];
     var i = 0;
     var timer;
-
-    useEffect(() => {
-        typingEffect();
-    }, []);
+    let typer=document.getElementsByClassName('typing-text')[0];
+    // useEffect(() => {
+    //     typingEffect();
+    // }, []);
     function typingEffect() {
         let role = roles[i].split("");
         var looper = function () {
             if (role.length > 0) {
-                document.getElementsByClassName('typing-text')[0].innerHTML += role.shift();
+                typer.innerHTML += role.shift();
             } else {
                 deletingEffect();
-                return false;
             };
             timer = setTimeout(looper, 500);
         };
@@ -29,7 +29,7 @@ function About() {
         var loopDeleting = function () {
             if (role.length > 0) {
                 role.pop();
-                document.getElementsByClassName('typing-text')[0].innerHTML = role.join("");
+                typer.innerHTML = role.join("");
             } else {
                 if (roles.length > (i + 1)) {
                     i++;
@@ -47,15 +47,20 @@ function About() {
         <div className='about-section'>
             <div><img src={image} /></div>
             <div>
-                <h1>{"<"}Who<span style={{ color: '#fa3939' }}>AmI?/{">"}</span></h1>
-                <h1 style={{ textAlign: 'center' }}>I am</h1>
-                <div className='typing-container'>
-                    <h1 style={{ textAlign: 'center' }}><span className='typing-text'></span><span className='blink'>|</span></h1>
+                <h1 style={{fontSize:50}}>{"<"}Who<span style={{ color: '#fa3939' }}>AmI?/{">"}</span></h1>
+                <h1 style={{fontSize:50}}>I am</h1>
+            </div>
+            <div className='typing-container'>
+                    <h1 style={{fontSize:40}}><span className='typing-text'></span><span className='blink'>|</span></h1>
                 </div>
-            </div>
             <div>
-                <p>Hey there! 👋 I'm Paritosh Singh, a passionate Software Engineering undergrad at Vellore Institute of Technology. 💻 I am a programming enthusiast and my specialties are blockchain and web development🌌.👯 Always open for collaborations on projects and actively looking for new opportunities. Let's connect and embark on an exciting adventure through the vast universe of technology! 🚀</p>
+                <h4>Hey there! 👋 I'm Paritosh Singh, a passionate Software Engineering undergrad at Vellore Institute of Technology. 💻 I am a programming enthusiast and my specialties are blockchain and web development🌌.👯 Always open for collaborations on projects and actively looking for new opportunities. Let's connect and embark on an exciting adventure through the vast universe of technology! 🚀</h4>
             </div>
+            <div style={{marginTop:'4px'}}>Find me on:</div>
+            <div className='socials'>
+                <Socials/>            
+            </div>
+
         </div>
     )
 }

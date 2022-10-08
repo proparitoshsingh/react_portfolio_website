@@ -1,0 +1,16 @@
+.proj{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.proj h1{
+    font-size: 50px;
+    text-decoration: underline;
+}
+.proj card{
+    display: flex;
+    flex-direction: row;
+}
