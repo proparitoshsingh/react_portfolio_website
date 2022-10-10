@@ -5,11 +5,16 @@
     text-align: center;
 }
 
-.about-section img {
-    width: 15%;
+.about-section h1 {
+    margin: 9% 0%;
+    font-size: 50px;
+}
+
+.about-section .profile img {
+    width: 10%;
     height: auto;
     display: block;
-    margin: 4% auto;
+    margin: 2% auto;
     border-radius: 50%;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
@@ -20,7 +25,12 @@
     box-shadow: 2px 12px 60px #d36147;
 }
 
-.typing-text{
+.about-section h4 {
+    font-size: 1.5rem;
+    margin: 4px 4%;
+}
+
+.typing-text {
     text-align: center;
     color: #fa3939;
 }
@@ -35,7 +45,32 @@
     }
 }
 
-.socials{
+.socials {
     display: flex;
     flex-direction: row;
+}
+
+@media screen and (max-width: 1100px) {
+    .about-section .profile img {
+        width: 15%;
+    }
+
+    .about-section h4 {
+        font-size: 1.2rem;
+    }
+
+    .about-section .profile img {
+        margin-top: 24px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .about-section .profile img {
+        width: 40%;
+    }
+
+    .about-section h4 {
+        font-size: 0.9rem;
+        margin: 0% 7%;
+    }
 }

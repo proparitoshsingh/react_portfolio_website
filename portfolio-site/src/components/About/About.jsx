@@ -45,18 +45,18 @@ function About() {
     };
     return (
         <div className='about-section'>
-            <div><img src={image} /></div>
+            <div className='profile'><img src={image} /></div>
             <div>
-                <h1 style={{fontSize:50}}>{"<"}Who<span style={{ color: '#fa3939' }}>AmI?/{">"}</span></h1>
-                <h1 style={{fontSize:50}}>I am</h1>
+                <h1>{"<"}Who<span style={{ color: '#fa3939' }}>AmI?/{">"}</span></h1>
+                <h1>I am</h1>
             </div>
             <div className='typing-container'>
-                    <h1 style={{fontSize:40}}><span className='typing-text'></span><span className='blink'>|</span></h1>
+                    <h1 style={{fontSize:40}}><span className='typing-text'>A Developer.</span><span className='blink'>|</span></h1>
                 </div>
             <div>
                 <h4>Hey there! 👋 I'm Paritosh Singh, a passionate Software Engineering undergrad at Vellore Institute of Technology. 💻 I am a programming enthusiast and my specialties are blockchain and web development🌌.👯 Always open for collaborations on projects and actively looking for new opportunities. Let's connect and embark on an exciting adventure through the vast universe of technology! 🚀</h4>
             </div>
-            <div style={{marginTop:'4px'}}>Find me on:</div>
+            <div style={{marginTop:'2%'}}>Find me on:</div>
             <div className='socials'>
                 <Socials/>            
             </div>
