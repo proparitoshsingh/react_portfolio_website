@@ -6,7 +6,7 @@ function Card({ img, githubLink, demoLink, descrip, title }) {
   return (
     <div className='cards'>
       <img src={img} alt="Project Image" />
-      <div class="card-content">
+      <div className="card-content">
         <h3>{title}</h3>
         <p>{descrip}</p>
       </div>
