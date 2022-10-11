@@ -1,6 +1,6 @@
 .cards{
     display: flex;
-    width: 30vw;
+    width: 20vw;
     background-color: #191a1d;
     border-radius: 10px;
     flex-direction: column;
@@ -15,7 +15,7 @@
 }
 
 .cards img {
-    width: 29vw;
+    width: 20vw;
     height: 100%;
     border-radius: 5%;
 }
@@ -44,10 +44,21 @@
     color: #d36147;
 }
 
-@media (max-width: 768px) {
-    .card {
-        max-width: 100%;
-        margin-right: 0;
-        margin-bottom: 20px;
+@media screen and (max-width: 768px) {
+    .cards {
+        width: 70vw;
+    }
+    .cards img {
+        width: 70vw;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .cards {
+        width: 90vw;
+        margin-left: auto;
+    }
+    .cards img {
+        width: 90vw;
     }
 }

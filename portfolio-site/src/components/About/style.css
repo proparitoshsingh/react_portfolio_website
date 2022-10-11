@@ -20,7 +20,7 @@
     transition: transform 0.3s ease-in-out;
 }
 
-.about-section img:hover {
+.about-section .profile img:hover {
     transform: rotate(720deg) scale(1.2);
     box-shadow: 2px 12px 60px #d36147;
 }
