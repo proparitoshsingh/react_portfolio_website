@@ -3,7 +3,21 @@ import './style.css';
 
 const Navbar = ({ scrollToSection }) => {
   const [ham, setHam] = useState(true);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollTop, setLastScrollTop] = useState(0);
   useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollTop = window.scrollY;
+      if (currentScrollTop > lastScrollTop) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+      setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
     const handleSize = () => {
       setHam(window.innerWidth < 768);
     };
@@ -11,9 +25,10 @@ const Navbar = ({ scrollToSection }) => {
     window.addEventListener("resize", handleSize);
     return () => {
       window.removeEventListener("resize", handleSize);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
-  
+  }, [lastScrollTop]);
+
   const scrollToSectionHandler = (id) => {
     scrollToSection(id);
     if (ham) {
@@ -31,7 +46,7 @@ const Navbar = ({ scrollToSection }) => {
   };
 
   return (
-    <div className="navbar">
+    <div className={`navbar ${isVisible ? '' : 'hidden'}`}>
       <div className="logo">{"<"}Paritosh<span style={{ color: '#fa3939' }}>Singh{"/>"}</span></div>
       {ham ? hambar(scrollToSectionHandler) : chapati(scrollToSectionHandler)}
     </div>

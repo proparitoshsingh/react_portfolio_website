@@ -5,7 +5,7 @@ import codeboard from '../../assets/codeboards.png'
 import covid from '../../assets/covid.png'
 import mentalaid from '../../assets/mentalaid.png'
 
-function Projects() {
+function Projects({id}) {
   const data = [
     {
       title: 'Code Board',
@@ -27,7 +27,7 @@ function Projects() {
     },
   ];
   return (
-    <div className='proj'>
+    <div className='proj' id={id}>
       <h1>{"<"}My<span style={{ color: '#fa3939' }}>Projects/{">"}</span></h1>
       <div className='card'>
         <Card img={codeboard} title={data[0].title} descrip={data[0].description} githubLink={data[0].githubLink} demoLink={data[0].demolink} />

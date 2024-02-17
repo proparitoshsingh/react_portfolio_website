@@ -3,7 +3,7 @@ import image from '../../assets/profile.png'
 import './style.css'
 import Socials from './socials/Socials';
 
-function About() {
+function About({id}) {
     var roles = ["A Web Developer", "A Blockchain Developer", "A DeFi Enthusiast", "A Lifelong Student"];
     var i = 0;
     var timer;
@@ -44,7 +44,7 @@ function About() {
         loopDeleting();
     };
     return (
-        <div className='about-section'>
+        <div className='about-section' id={id}>
             <div className='profile'><img src={image} /></div>
             <div>
                 <h1>{"<"}Who<span style={{ color: '#fa3939' }}>AmI?/{">"}</span></h1>

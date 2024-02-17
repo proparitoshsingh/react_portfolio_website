@@ -15,9 +15,9 @@ import tailwind from '../../assets/tailwind.svg'
 import rust from '../../assets/rust.svg'
 import vue from '../../assets/vue.svg'
 
-function Skills() {
+function Skills({id}) {
     return (
-        <div className='skill'>
+        <div className='skill' id={id}>
             <h1>{"<"}Skills<span style={{ color: '#fa3939' }}>&Tools/{">"}</span></h1>
             <div className='skills'>
                 <Tile logo={reactLogo} name='React' />

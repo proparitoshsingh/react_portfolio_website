@@ -1,9 +1,9 @@
 import React from 'react'
 import './style.css'
 
-function Contact() {
+function Contact({id}) {
     return (
-        <div className='contact'>
+        <div className='contact' id={id}>
             <h1>{"<"}Contact<span style={{ color: '#fa3939' }}>Me/{">"}</span></h1>
             <div className='contacts'>
                 <div className='contact-container'>
