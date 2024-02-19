@@ -9,10 +9,7 @@ import Footer from './components/Footer/Footer';
 
 function App() {
   const scrollToSection = (id) => {
-    console.log('Scrolling to section:', id);
     const element = document.querySelector(`#${id}`);
-    console.log('Element:', element);
-
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
