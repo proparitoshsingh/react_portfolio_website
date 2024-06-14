@@ -23,7 +23,7 @@
     height: 38vh;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 2px 2px 20px #d36147;
+    box-shadow: 2px 2px 10px #d36147;
 }
 
 .contact-container form input,button {
@@ -55,7 +55,7 @@ form textarea {
     transition: 0.3s ease-in-out;
 }
 form input:hover,textarea:hover {
-    transform: scale(1.1);
+    box-shadow: 2px 2px 20px #d36147;
 }
 form button:hover {
     background-color: red;
